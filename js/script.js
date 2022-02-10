@@ -16,7 +16,7 @@ function addTask(e){
         alert('Add a task.')
     }else{
         let li = document.createElement('li');
-        li.appendChild(document.createTextNode(taskInput.value + " "));
+        li.appendChild(document.createTextNode(taskInput.value+ " "));
         let link = document.createElement('a');
         link.setAttribute('href','#');
         link.innerHTML = 'x';
@@ -41,5 +41,8 @@ function removeTask(e){
 }
 
 function celarTask(e){
-    taskList.innerHTML = " ";
+    if (confirm("Are you sure delete all data?")){
+        taskList.innerHTML = " ";
+    }
+    
 }
